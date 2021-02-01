@@ -1,0 +1,58 @@
+@import './styles.scss';
+
+.footer {
+  background-color: #ECEAEA;
+  padding: 24px 0;
+
+  &__menu-link {
+    color: $footer-text-color;
+  }
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+
+  &__phone {
+    text-decoration: none;
+    color: $footer-text-color;
+    display: block;
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $menu-hover;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      bottom: 0;
+      left: -23px;
+      background-image: url('../images/phone.svg');
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__adress {
+    margin-left: 72px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $footer-text-color;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: -23px;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/adress.svg');
+    }
+  }
+}

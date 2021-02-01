@@ -1,0 +1,111 @@
+@import './styles.scss';
+
+.pictures {
+  padding-top: 45px;
+  padding-bottom: 320px;
+
+  &__title {
+    color: $text-color;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 39px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(25% - 24px);
+    border: 1px solid $border-color;
+    margin-right: 32px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+  }
+
+  &__item-description {
+    padding: 0 24px 24px 24px;
+  }
+
+  &__item-title {
+    padding-top: 12px;
+    margin-bottom: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $text-color;
+  }
+
+  &__item-picture-sold {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $text-color;
+  }
+
+  &__item-price-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__item-old-price {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-decoration: line-through;
+    color: #A0A0A0;
+  }
+
+  &__item-current-price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $text-color;
+  }
+
+  &__item-btn {
+    width: 118px;
+    height: 48px;
+    background-color: $btn-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #F4F6F9;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $btn-hover;
+    }
+  }
+}

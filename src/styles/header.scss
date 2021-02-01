@@ -1,0 +1,91 @@
+@import './styles.scss';
+
+.header {
+  padding: 24px 0;
+  border-bottom: 1px solid $border-color;
+
+  &__search {
+    width: 416px;
+    height: 48px;
+    display: flex;
+  }
+
+  &__input {
+    width: 294px;
+    padding: 13px 0 14px 16px;
+    border: 1px solid $border-color;
+    color: $text-color;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+
+    &::placeholder {
+      color: #9F9F9F;
+      font-family: Merriweather;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    width: 122px;
+    height: 48px;
+    background-color: $btn-color;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    transition: 0.3s;
+
+
+    &:hover {
+      background-color: $btn-hover;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+
+  &__image {
+    width: 100%;
+  }
+
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__item {
+    list-style: none;
+  }
+  
+  &__link {
+    text-decoration: none;
+    color: $text-color;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 48px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #9F9F9F;
+    }
+  }
+
+}

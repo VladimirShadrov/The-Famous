@@ -3,6 +3,8 @@ import '../styles/header.scss';
 import '../styles/footer.scss';
 import '../styles/pictures.scss';
 
+require('isomorphic-fetch');
+
 const buttons = Array.from(document.querySelectorAll('.pictures__item-btn'));
 
 //Перенос фотографий в папку dist

@@ -39,9 +39,31 @@ async function setRequest(item) {
 
 }
 
+let activeButtons = JSON.parse(sessionStorage.getItem('pictures')) || [];
 buttons.forEach(item => {
-  item.addEventListener('click', () => {
+  item.addEventListener('click', (event) => {
+    const target = event.target.dataset.name;
+    const button = activeButtons.find(item => item === target);
+    
+    if (button) {
+        return
+      } else {
+      activeButtons.push(target);
+      sessionStorage.setItem('pictures', JSON.stringify(activeButtons));
+    }
+
     setRequest(item);
   })
 })
+
+function setStatusForButton() {
+  const activeButtons = JSON.parse(sessionStorage.getItem('pictures')) || [];
+
+  activeButtons.forEach(item => {
+    let button = buttons.find(button => button.dataset.name === item);
+    addToShoppingCart(button);
+  })
+};
+
+setStatusForButton();
 

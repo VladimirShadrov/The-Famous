@@ -39,6 +39,7 @@ async function setRequest(item) {
 
 }
 
+// Логика работы приложения при клике по кнопке
 let activeButtons = JSON.parse(sessionStorage.getItem('pictures')) || [];
 buttons.forEach(item => {
   item.addEventListener('click', (event) => {
@@ -56,6 +57,8 @@ buttons.forEach(item => {
   })
 })
 
+
+// Обновление состояния кнопок после перезагрузки страницы
 function setStatusForButton() {
   const activeButtons = JSON.parse(sessionStorage.getItem('pictures')) || [];
 
